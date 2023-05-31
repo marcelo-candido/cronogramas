@@ -1,17 +1,12 @@
-import { AppDataSource } from "./src/databases/data-source"
+import { AppDataSource } from "./src/databases/connections/data-source"
+AppDataSource.initialize()
 
-const express = require("express") 
-
+const express = require("express")
 const app = express()
-
 app.use(express.json())
 
-app.get('/', (request, response) => {
-    return response.json("E ai, Beleza?")
+app.get("/", (request, response) => {
+  return response.json("E aí, suave?")
 })
 
-app.listen(3333, () =>
-    console.log("O server esta ON na porta 3333.")
-)
-
-AppDataSource.initialize()
+app.listen(3333, () => console.log("O server tá ON na porta 3333."))
