@@ -11,12 +11,12 @@
     "noImplicitAny": false,
     "outDir": "build",
     "rootDir": "src",
-    "paths": {
-      "@controllers": ["./src/controllers/*"],
-      "@connections": ["./src/databases/connections/*"],
-      "@models": ["./src/databases/models/*"],
-      "@routes": ["./src/routes/*"],
-      "@services": ["./src/services/*"]
+    "paths":{
+      "@controllers":["./src/controllers/*"],
+      "@connections":["./src/databases/connections/*"],
+      "@models":["./src/databases/models/*"],
+      "@routes":["./src/routes/*"],
+      "@services":["./src/services/*"]
     }
   },
   "compileOnSave": true,

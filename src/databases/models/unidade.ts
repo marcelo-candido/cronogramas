@@ -1,27 +1,27 @@
 import { Entity, PrimaryColumn, Column } from "typeorm"
 import { v4 as uuid } from "uuid"
 
-@Entity("turma")
-export default class turma {
-  //Chave Primaria
+@Entity("unidade")
+export default class unidade {
+  //chave primaria
   @PrimaryColumn()
-  id_turma: string
+  id_unidade: string
 
   //chave estrangeira
   @Column()
   fk_curso: string
 
-  // Atributos
+  //atributos
   @Column({ nullable: true })
-  data_inicio: Date
+  descricao_unidade: string
 
   @Column({ nullable: true })
-  data_fim: Date
+  carga_horaria_unidade: number
 
   @Column({ nullable: true })
-  horas_aula_dia: Number
+  ordem: number
 
   constructor() {
-    this.id_turma = uuid()
+    this.id_unidade = uuid()
   }
 }
